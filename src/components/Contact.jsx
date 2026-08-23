@@ -1,5 +1,7 @@
 export default function Contact() {
   const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
+  const message = `السلام عليكم 
+عندي استفسار بخصوص منتجاتكم، ممكن أعرف التفاصيل؟`;
   const instagramUrl = "";
   const facebookUrl = "";
   const tiktokUrl =
@@ -16,7 +18,7 @@ export default function Contact() {
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           {/* واتساب */}
           <a
-            href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("عندي استفسار")}`}
+            href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary rounded-full gap-2 px-6"
