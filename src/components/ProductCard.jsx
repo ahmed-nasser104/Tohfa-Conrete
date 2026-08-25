@@ -10,11 +10,17 @@ export default function ProductCard({ product }) {
 
   return (
     <div className="card bg-base-100 border border-base-300 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-      <figure className="h-56 overflow-hidden">
+      <figure className="relative w-full h-64 overflow-hidden">
+        <img
+          src={product.image}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover blur-xl scale-110 opacity-50"
+        />
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+          className="relative w-full h-full object-contain hover:scale-105 transition-transform duration-500"
         />
       </figure>
       <div className="card-body p-5">
